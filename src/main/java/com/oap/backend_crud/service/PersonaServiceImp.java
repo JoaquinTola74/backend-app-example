@@ -2,10 +2,7 @@ package com.oap.backend_crud.service;
 
 import com.oap.backend_crud.entity.Persona;
 import com.oap.backend_crud.repository.PersonaRepository;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
 
 import java.util.List;
 
@@ -16,10 +13,6 @@ public class PersonaServiceImp implements PersonaService{
 
     public PersonaServiceImp(PersonaRepository personaRepository) {
         this.personaRepository = personaRepository;
-    }
-
-    public List<Persona> ultimos() {
-        return personaRepository.ultimos10lista();
     }
 
     //private Persona persona;
