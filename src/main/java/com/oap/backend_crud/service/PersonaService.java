@@ -10,4 +10,6 @@ public interface PersonaService {
     Persona findById(Integer id);
     void deleteById(Integer id);
     Persona update(Persona persona);
+
+    List<Persona> ultimos();
 }
