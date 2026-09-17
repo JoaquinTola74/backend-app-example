@@ -41,4 +41,9 @@ public class PersonaServiceImp implements PersonaService{
     public Persona update(Persona persona) {
         return personaRepository.save(persona);
     }
+
+    @Override
+    public List<Persona> ultimos() {
+        return List.of();
+    }
 }

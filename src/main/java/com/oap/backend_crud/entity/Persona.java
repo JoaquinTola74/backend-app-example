@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
+
 @Entity
 @Table(name="persona")
 @Getter
@@ -22,4 +25,7 @@ public class Persona {
     private String celular;
     private String cod_uni_canero;
     private String estado;
+
+    @OneToMany(mappedBy = "persona")
+    private List<Agenda> agendas;
 }

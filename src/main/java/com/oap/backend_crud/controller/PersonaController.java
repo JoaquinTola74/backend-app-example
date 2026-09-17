@@ -22,8 +22,9 @@ public class PersonaController {
     }
     @GetMapping("personas")
     public List<Persona> findAll(){
-        List<Persona> personas = personaService.findAll();
-        return personas.stream().filter(p -> p.getNombre().equals("MARIA")).collect(Collectors.toList());
+        return personaService.findAll();
+        //List<Persona> personas = personaService.findAll();
+        //return personas.stream().filter(p -> p.getNombre().equals("MARIA")).collect(Collectors.toList());
     }
     @GetMapping("personas/{id}")
     public Persona findAllById(@PathVariable Integer id){
